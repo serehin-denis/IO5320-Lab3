@@ -6,11 +6,11 @@ namespace lab3;
 /// </summary>
 public class Furniture
 {
-    public string Name { get; set; }
-    public string Material { get; set; }
-    public string Destination { get; set; }
-    public int Price { get; set; }
-    public int Year { get; set; }
+    public string Name { get; }
+    public string Material { get; }
+    public string Destination { get; }
+    public int Price { get; }
+    public int Year { get; }
 
     /// <summary>
     /// Ініціалізує новий екземпляр класу <see cref="Furniture"/>.

@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace lab3
+﻿namespace lab3
 {
  class Program
     {
@@ -14,32 +12,32 @@ namespace lab3
             Furniture chair = new Furniture( "Крісло","Тканина", "Вітальня", 5000, 2021);
             Furniture table = new Furniture( "Стіл","Дерево", "Їдальня", 15000, 2019);
             
-            Furniture[] Catalog = {sofa, chair, table};
+            Furniture[] catalog = {sofa, chair, table};
 
-            foreach (Furniture f in Catalog)
+            foreach (Furniture f in catalog)
             {
                 Console.Write(f + "\n");
             }
             Console.WriteLine("");
             
-            Catalog = Catalog.OrderBy(x => x.Price).ThenByDescending(x => x.Year).ToArray();
+            catalog = catalog.OrderBy(x => x.Price).ThenByDescending(x => x.Year).ToArray();
             Console.WriteLine("Відсортований список:");
-            foreach (Furniture f in Catalog)
+            foreach (Furniture f in catalog)
             {
                 Console.Write(f + "\n");
             }
             Console.WriteLine("");
 
-            bool isFound = Catalog.Contains(example);
+            bool isFound = catalog.Contains(example);
 
             if (isFound)
             {
-                int index = Catalog.IndexOf(example);
-                Console.WriteLine($"Об'єкт, ідентичний заданному: {Catalog[index]}\n");
+                int index = catalog.IndexOf(example);
+                Console.WriteLine($"Об'єкт, ідентичний заданому: {catalog[index]}");
             }
             else
             {
-                Console.WriteLine($"Об'єкт, ідентичний заданному не знайдено\n");
+                Console.WriteLine($"Об'єкт, ідентичний заданому не знайдено");
             }
         }
     }
